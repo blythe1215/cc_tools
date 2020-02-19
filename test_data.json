@@ -7,8 +7,12 @@
 	{"name" : "Atari Lynx", 
 	"Years" : 2015,
 	"platform": {"launch_year" : 1989,
-				"name" : "Atari Lynx"}}
+				"name" : "Atari Lynx"}},
 
+	{"name" : "Super Mario", 
+	"Years" : 1985,
+	"platform": {"launch_year" : 1970,
+				"name" : "Nintendo"}}
 
 
 ]
