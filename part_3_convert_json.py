@@ -19,7 +19,7 @@ def make_cc_class( json_data ):
 		level.time = value["time_limit"]
 		level.num_chips = value["num_chips"]
 		level.upper_layer = value["upper_layer"]
-		level.optional_fields = value["optional_fields"]
+		#level.optional_fields = value["optional_fields"]
 
 		for json_field in value["optional_fields"]:
 			field_type = json_field["field_type"]
@@ -36,7 +36,7 @@ def make_cc_class( json_data ):
 				monsters = []
 				for json_monster in json_field["monsters"]:
 					x = json_monster["x"]
-					y = jason_monster["y"]
+					y = json_monster["y"]
 					new_monster_coord == cc_classes.CCCoordinate(x, y)
 					monster.append(new_monster_coord)
 				new_monster_field = cc_classes.CCMonsterMovementField(monsters)
