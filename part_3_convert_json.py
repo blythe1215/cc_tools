@@ -42,9 +42,9 @@ def make_cc_class( json_data ):
 				new_monster_field = cc_classes.CCMonsterMovementField(monsters)
 				level.add_field(new_monster_field)
 		
-		new_level_pack.add_level(level)
+	new_level_pack.add_level(level)
 
-	return level
+	return new_level_pack
 
 new_level_pack = make_cc_class(data1)
 #print(levelPack)
