@@ -39,7 +39,7 @@ def make_cc_class( json_data ):
 				for json_monster in json_field["monsters"]:
 					x = json_monster["x"]
 					y = json_monster["y"]
-					new_monster_coord == cc_classes.CCCoordinate(x, y)
+					new_monster_coord = cc_classes.CCCoordinate(x, y)
 					monsters.append(new_monster_coord)
 				new_monster_field = cc_classes.CCMonsterMovementField(monsters)
 				optional_fields.append(new_monster_field)
