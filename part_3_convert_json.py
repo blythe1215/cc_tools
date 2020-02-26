@@ -34,7 +34,7 @@ def make_cc_class( json_data ):
 			elif field_type == "password":
 				new_password = cc_classes.CCEncodedPasswordField(json_field["value"])
 				optional_fields.append(new_password)
-			elif field_type == "monster":
+			elif field_type == "monsters":
 				monsters = []
 				for json_monster in json_field["monsters"]:
 					x = json_monster["x"]
