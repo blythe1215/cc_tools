@@ -44,10 +44,6 @@
 		
 		"optional_fields":[
 			{
-				"field_type" : "title",
-				"value" : "title"
-			},
-			{
 				"field_type" : "password",
 				"value" : [216, 219, 218, 221]
 			},
@@ -70,10 +66,7 @@
 				]
 			}
 		]
-	}
-]
-
-[
+	},
 	{
 		"level_number" : 2,
 		"time_limit" : 120,
@@ -118,10 +111,7 @@
 		],
 		
 		"optional_fields":[
-			{
-				"field_type" : "title",
-				"value" : "title"
-			},
+			
 			{
 				"field_type" : "password",
 				"value" : [216, 219, 218, 221]
@@ -155,3 +145,4 @@
 		]
 	}
 ]
+

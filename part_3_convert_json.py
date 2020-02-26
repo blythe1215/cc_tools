@@ -20,29 +20,32 @@ def make_cc_class( json_data ):
 		level.num_chips = value["num_chips"]
 		level.upper_layer = value["upper_layer"]
 		#level.optional_fields = value["optional_fields"]
-
+		
+		optional_fields = []
+		
 		for json_field in value["optional_fields"]:
 			field_type = json_field["field_type"]
 			if field_type == "hint":
 				new_hint = cc_classes.CCMapHintField(json_field["value"])
-				level.add_field(new_hint)
+				optional_fields.append(new_hint)
 			elif field_type == "title":
 				new_title = cc_classes.CCMapTitleField(json_field["value"])
-				level.add_field(new_title)
+				optional_fields.append(new_title)
 			elif field_type == "password":
 				new_password = cc_classes.CCEncodedPasswordField(json_field["value"])
-				level.add_field(new_password)
+				optional_fields.append(new_password)
 			elif field_type == "monster":
 				monsters = []
 				for json_monster in json_field["monsters"]:
 					x = json_monster["x"]
 					y = json_monster["y"]
 					new_monster_coord == cc_classes.CCCoordinate(x, y)
-					monster.append(new_monster_coord)
+					monsters.append(new_monster_coord)
 				new_monster_field = cc_classes.CCMonsterMovementField(monsters)
-				level.add_field(new_monster_field)
-		
-	new_level_pack.add_level(level)
+				optional_fields.append(new_monster_field)
+	
+		level.optional_fields =  optional_fields
+		new_level_pack.add_level(level)
 
 	return new_level_pack
 
